@@ -33,7 +33,8 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="#" className="font-display text-2xl font-bold tracking-tight text-primary-foreground">
-            Adaptive Future Technologies
+            <span className="hidden md:inline">Adaptive Future Technologies</span>
+            <span className="md:hidden">AFT</span>
           </a>
 
           {/* Desktop */}
