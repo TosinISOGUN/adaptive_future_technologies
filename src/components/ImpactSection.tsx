@@ -40,11 +40,8 @@ const ImpactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="impact" className="py-32 section-padding relative" ref={ref}>
-      {/* Subtle glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto relative">
+    <section id="impact" className="py-32 section-padding relative snap-section flex items-center" ref={ref}>
+      <div className="max-w-7xl mx-auto relative w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -52,7 +49,7 @@ const ImpactSection = () => {
           className="text-center mb-20"
         >
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-4">Our Impact</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Performance & Proof
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -60,7 +57,6 @@ const ImpactSection = () => {
           </p>
         </motion.div>
 
-        {/* Stats */}
         <div className="grid md:grid-cols-3 gap-8 mb-24">
           {stats.map((stat, i) => (
             <motion.div
@@ -80,7 +76,6 @@ const ImpactSection = () => {
           ))}
         </div>
 
-        {/* Testimonial */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -88,7 +83,7 @@ const ImpactSection = () => {
           className="max-w-3xl mx-auto text-center relative"
         >
           <Quote className="text-primary/20 mx-auto mb-6" size={48} />
-          <blockquote className="text-xl md:text-2xl font-light leading-relaxed text-foreground/90 italic mb-6">
+          <blockquote className="text-xl md:text-2xl font-light leading-relaxed text-foreground/80 italic mb-6">
             "Adaptive Future moved us from fragmented spreadsheets to a unified
             digital command center. Their GovTech solution didn't just digitize our
             process; it transformed our revenue visibility."

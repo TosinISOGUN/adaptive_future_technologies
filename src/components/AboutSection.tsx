@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Rocket } from "lucide-react";
 
@@ -8,9 +7,8 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-32 section-padding" ref={ref}>
-      <div className="max-w-7xl mx-auto">
-        {/* Section label */}
+    <section id="about" className="py-32 section-padding snap-section flex items-center" ref={ref}>
+      <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -22,13 +20,12 @@ const AboutSection = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left: about text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 leading-tight text-foreground">
               Bridging Global Standards
               <br />
               with <span className="text-gradient">Local Realities</span>
@@ -46,7 +43,6 @@ const AboutSection = () => {
             </p>
           </motion.div>
 
-          {/* Right: Vision & Mission cards */}
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -58,7 +54,7 @@ const AboutSection = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Target className="text-primary" size={20} />
                 </div>
-                <h3 className="font-display text-xl font-semibold">Our Vision</h3>
+                <h3 className="font-display text-xl font-semibold text-foreground">Our Vision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 To be the operating system for African growth, empowering every
@@ -77,7 +73,7 @@ const AboutSection = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Rocket className="text-primary" size={20} />
                 </div>
-                <h3 className="font-display text-xl font-semibold">Our Mission</h3>
+                <h3 className="font-display text-xl font-semibold text-foreground">Our Mission</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 To deploy adaptive, resilient, and intelligent technology

@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { DollarSign, Settings, ClipboardCheck, Heart, Leaf } from "lucide-react";
-import productsBg from "@/assets/products-bg.jpg";
 
 const products = [
   {
@@ -49,17 +48,10 @@ const ProductsSection = () => {
   return (
     <section
       id="products"
-      className="py-32 section-padding relative overflow-hidden"
+      className="py-32 section-padding relative overflow-hidden snap-section flex items-center"
       ref={ref}
     >
-      {/* Background */}
-      <div
-        className="absolute inset-0 opacity-20 bg-cover bg-center"
-        style={{ backgroundImage: `url(${productsBg})` }}
-      />
-      <div className="absolute inset-0 bg-background/80" />
-
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -69,7 +61,7 @@ const ProductsSection = () => {
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-4">
             The Flow Cloud Ecosystem
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Unified. Modular. <span className="text-gradient">Intelligent.</span>
           </h2>
         </motion.div>
@@ -115,7 +107,7 @@ const ProductsSection = () => {
                 );
               })()}
               <div>
-                <h3 className="font-display text-3xl font-bold">{products[active].name}</h3>
+                <h3 className="font-display text-3xl font-bold text-foreground">{products[active].name}</h3>
                 <p className="text-primary text-sm">{products[active].category}</p>
               </div>
             </div>
@@ -138,7 +130,7 @@ const ProductsSection = () => {
                 <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
                   Primary Benefit
                 </p>
-                <p className="text-lg text-foreground/90 leading-relaxed">
+                <p className="text-lg text-foreground/80 leading-relaxed">
                   {products[active].benefit}
                 </p>
               </div>
