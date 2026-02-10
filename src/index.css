@@ -6,50 +6,53 @@
 
 @layer base {
   :root {
-    --background: 235 25% 21%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 235 25% 15%;
 
-    --card: 235 25% 16%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 235 25% 15%;
 
-    --popover: 235 25% 16%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 25% 15%;
 
-    --primary: 174 72% 56%;
-    --primary-foreground: 235 25% 10%;
+    --primary: 235 30% 26%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 235 20% 30%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 235 25% 15%;
 
-    --muted: 235 20% 26%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 174 72% 56%;
-    --accent-foreground: 235 25% 10%;
+    --accent: 235 30% 26%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 235 20% 30%;
-    --input: 235 20% 30%;
-    --ring: 174 72% 56%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 235 30% 26%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 235 25% 14%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 174 72% 56%;
-    --sidebar-primary-foreground: 235 25% 10%;
+    --sidebar-primary: 235 30% 26%;
+    --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 235 20% 26%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 235 20% 30%;
-    --sidebar-ring: 174 72% 56%;
+    --sidebar-ring: 235 30% 26%;
 
     /* Custom tokens */
-    --hero-gradient: linear-gradient(180deg, hsla(235, 25%, 10%, 0) 0%, hsl(235, 25%, 10%) 100%);
-    --glow: 174 72% 56%;
-    --surface: 235 25% 14%;
-    --surface-light: 235 20% 18%;
+    --navbar: 235 30% 26%;
+    --navbar-foreground: 0 0% 98%;
+    --footer: 235 30% 26%;
+    --footer-foreground: 0 0% 90%;
+    --glow: 235 30% 26%;
+    --surface: 220 14% 96%;
+    --surface-light: 220 14% 98%;
   }
 }
 
@@ -67,7 +70,7 @@
     font-family: 'Space Grotesk', sans-serif;
   }
 
-  /* Smooth scroll */
+  /* Smooth scroll — disabled for snap */
   html {
     scroll-behavior: smooth;
   }
@@ -77,31 +80,47 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(235, 25%, 14%);
+    background: hsl(0, 0%, 96%);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(235, 20%, 30%);
+    background: hsl(220, 13%, 80%);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(174, 72%, 56%);
+    background: hsl(235, 30%, 26%);
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(174,72%,56%)] to-[hsl(200,80%,60%)];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(235,30%,26%)] to-[hsl(220,60%,45%)];
   }
 
   .glow-line {
-    @apply h-px bg-gradient-to-r from-transparent via-[hsl(174,72%,56%)] to-transparent;
+    @apply h-px bg-gradient-to-r from-transparent via-[hsl(235,30%,26%)] to-transparent;
   }
 
   .glass {
-    @apply bg-[hsl(235,25%,16%,0.6)] backdrop-blur-xl border border-[hsl(235,20%,30%,0.5)];
+    @apply bg-[hsl(235,30%,26%,0.95)] backdrop-blur-xl border border-[hsl(235,20%,40%,0.5)];
+  }
+
+  .glass-light {
+    @apply bg-[hsl(0,0%,100%,0.85)] backdrop-blur-xl border-b border-[hsl(220,13%,91%)];
   }
 
   .section-padding {
     @apply px-6 md:px-12 lg:px-24;
+  }
+
+  /* Tesla-style scroll snap */
+  .snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
   }
 }
