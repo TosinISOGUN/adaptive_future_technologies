@@ -7,7 +7,7 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-32 section-padding snap-section flex items-center" ref={ref}>
+    <section id="about" className="py-32 section-padding flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ const AboutSection = () => {
               with <span className="text-gradient">Local Realities</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Adaptive Future Technology Solution Limited is a premier technology
+              Adaptive Future Technologies is a premier technology
               engineering firm bridging the gap between global digital standards and
               local operational realities.
             </p>

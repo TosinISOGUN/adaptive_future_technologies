@@ -40,7 +40,7 @@ const ImpactSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="impact" className="py-32 section-padding relative snap-section flex items-center" ref={ref}>
+    <section id="impact" className="py-32 section-padding relative flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto relative w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

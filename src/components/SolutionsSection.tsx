@@ -34,7 +34,7 @@ const SolutionsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="solutions" className="py-32 section-padding snap-section flex items-center" ref={ref}>
+    <section id="solutions" className="py-32 section-padding flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

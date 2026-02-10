@@ -8,7 +8,7 @@ import heroSlide3 from "@/assets/hero-slide-3.jpg";
 const slides = [
   {
     image: heroSlide1,
-    tagline: "Adaptive Future Technology",
+    tagline: "Adaptive Future Technologies",
     headline: ["Engineering the", "Digital Future", "of Africa"],
     description:
       "We engineer the Digital Operating Systems for governments, enterprises, and institutions in emerging markets.",
@@ -44,7 +44,7 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center snap-section">
+    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Background images with crossfade */}
       <AnimatePresence mode="sync">
         <motion.div
@@ -130,9 +130,8 @@ const HeroSection = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1 rounded-full transition-all duration-500 ${
-              i === current ? "w-10 bg-white" : "w-4 bg-white/40"
-            }`}
+            className={`h-1 rounded-full transition-all duration-500 ${i === current ? "w-10 bg-white" : "w-4 bg-white/40"
+              }`}
           />
         ))}
       </div>

@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# Adaptive Future Technologies
 
-## Project info
+Engineering the Digital Operating Systems for governments, enterprises, and institutions in emerging markets.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Project Overview
 
-## How can I edit this code?
+Adaptive Future Technologies (AFT) is a premier technology engineering firm bridging the gap between global digital standards and local operational realities. Our mission is to deploy adaptive, resilient, and intelligent technology infrastructure that solves the unique challenges of the African landscape.
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js & npm installed
 
-Changes made via Lovable will be committed automatically to this repo.
+### Local Development
 
-**Use your preferred IDE**
+1. **Clone the repository**
+   ```sh
+   git clone <YOUR_GIT_URL>
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. **Start the development server**
+   ```sh
+   npm run dev
+   ```
 
-Follow these steps:
+## Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Vite**: Build tool for fast development
+- **TypeScript**: For type-safe development
+- **React**: Frontend library
+- **Tailwind CSS**: Utility-first CSS framework
+- **shadcn-ui**: Reusable UI components
+- **Framer Motion**: Production-ready animations
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Deployment
 
-# Step 3: Install the necessary dependencies.
-npm i
+The project can be deployed to any modern static hosting service (e.g., Netlify, Vercel, or custom infrastructure).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1. **Build the production bundle**
+   ```sh
+   npm run build
+   ```
 
-**Edit a file directly in GitHub**
+2. **Preview the build**
+   ```sh
+   npm run preview
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contact
 
-**Use GitHub Codespaces**
+For inquiries, please reach out to [hello@adaptive-future.com](mailto:hello@adaptive-future.com).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2026 Adaptive Future Technologies. All rights reserved.

@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="h-px bg-primary-foreground/10 mt-8 mb-6" />
 
         <p className="text-center text-primary-foreground/40 text-xs">
-          © {new Date().getFullYear()} Adaptive Future Technology Solution Limited. All rights reserved.
+          © {new Date().getFullYear()} Adaptive Future Technologies. All rights reserved.
         </p>
       </div>
     </footer>

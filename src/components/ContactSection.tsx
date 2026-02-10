@@ -30,7 +30,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-32 section-padding snap-section flex items-center" ref={ref}>
+    <section id="contact" className="py-32 section-padding flex items-center" ref={ref}>
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -48,7 +48,7 @@ const ProductsSection = () => {
   return (
     <section
       id="products"
-      className="py-32 section-padding relative overflow-hidden snap-section flex items-center"
+      className="py-32 section-padding relative overflow-hidden flex items-center"
       ref={ref}
     >
       <div className="max-w-7xl mx-auto relative w-full">
@@ -77,11 +77,10 @@ const ProductsSection = () => {
             <button
               key={p.name}
               onClick={() => setActive(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                active === i
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${active === i
                   ? "bg-primary text-primary-foreground"
                   : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
-              }`}
+                }`}
             >
               {p.name}
             </button>
