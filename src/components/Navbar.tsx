@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "../assets/aft-logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -31,11 +32,16 @@ const Navbar = () => {
           : "bg-primary/90 backdrop-blur-md"
           }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-          <a href="#" className="font-display text-2xl font-bold tracking-tight text-primary-foreground">
-            <span className="hidden md:inline">Adaptive Future Technologies</span>
-            <span className="md:hidden">AFT</span>
-          </a>
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-0 md:px-6 h-20">
+          <div className="flex items-center">
+            <a href="#" className="relative flex items-center h-20 w-32 md:w-48 group">
+              <img
+                src={logo}
+                alt="Adaptive Future Technologies"
+                className="absolute left-0 top-1/2 -translate-y-1/2 h-64 md:h-80 w-auto max-w-none object-contain transition-all duration-300 pointer-events-none"
+              />
+            </a>
+          </div>
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-8">
