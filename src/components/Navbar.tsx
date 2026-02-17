@@ -32,13 +32,13 @@ const Navbar = () => {
           : "bg-primary/90 backdrop-blur-md"
           }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-0 md:px-6 h-20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
           <div className="flex items-center">
             <a href="#" className="relative flex items-center h-20 w-32 md:w-48 group">
               <img
                 src={logo}
                 alt="Adaptive Future Technologies"
-                className="absolute left-0 top-1/2 -translate-y-1/2 h-64 md:h-80 w-auto max-w-none object-contain transition-all duration-300 pointer-events-none"
+                className="absolute left-[-50px] top-1/2 -translate-y-1/2 h-64 md:h-80 w-auto max-w-none object-contain transition-all duration-300 pointer-events-none"
               />
             </a>
           </div>
