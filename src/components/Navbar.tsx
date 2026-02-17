@@ -32,7 +32,7 @@ const Navbar = () => {
           : "bg-primary/90 backdrop-blur-md"
           }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 pr-6 md:pr-0">
           <div className="flex items-center">
             <a href="#" className="relative flex items-center h-20 w-32 md:w-48 group">
               <img
