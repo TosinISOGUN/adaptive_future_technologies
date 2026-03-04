@@ -80,7 +80,7 @@ const ImpactSection = () => {
   const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
 
   return (
-    <section id="impact" className="py-32 section-padding relative flex items-center" ref={ref}>
+    <section id="impact" className="py-32 section-padding relative flex items-center bg-surface" ref={ref}>
       <div className="max-w-7xl mx-auto relative w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

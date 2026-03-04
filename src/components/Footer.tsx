@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="py-12 section-padding bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <a href="#" className="font-display text-xl font-bold text-primary-foreground">
+            <Link to="/" className="font-display text-xl font-bold text-primary-foreground">
               AFT<span className="text-primary-foreground/50">.</span>
-            </a>
+            </Link>
             <p className="text-primary-foreground/60 text-sm mt-1">
               Engineering the Future of African Enterprise.
             </p>

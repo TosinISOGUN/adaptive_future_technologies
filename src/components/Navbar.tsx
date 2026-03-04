@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "../assets/aft-logo.png";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Impact", href: "#impact" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Products", href: "#products" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Impact", href: "/impact" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Products", href: "/products" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
@@ -29,37 +31,37 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "bg-primary shadow-lg"
-          : "bg-primary/90 backdrop-blur-md"
+          : "bg-primary/95 backdrop-blur-md"
           }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 pr-6 md:pr-0">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-16 pr-6 md:pr-0">
           <div className="flex items-center">
-            <a href="#" className="relative flex items-center h-20 w-32 md:w-48 group">
+            <Link to="/" className="relative flex items-center h-16 w-32 md:w-36 group">
               <img
                 src={logo}
                 alt="Adaptive Future Technologies"
-                className="absolute left-[-50px] top-1/2 -translate-y-1/2 h-64 md:h-80 w-auto max-w-none object-contain transition-all duration-300 pointer-events-none"
+                className="absolute left-[-20px] md:left-[-40px] top-1/2 -translate-y-1/2 h-44 md:h-52 w-auto max-w-none object-contain transition-all duration-300 pointer-events-none"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
-                className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
+                to={link.href}
+                className="text-xs font-medium text-primary-foreground/75 hover:text-primary-foreground transition-colors duration-300 uppercase tracking-wider"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
-              className="text-sm font-medium px-5 py-2 rounded-full bg-primary-foreground text-primary hover:opacity-90 transition-opacity"
+            <Link
+              to="/contact"
+              className="text-xs font-bold px-4 py-1.5 rounded-full bg-primary-foreground text-primary hover:bg-secondary hover:text-white transition-all duration-300"
             >
               Get in Touch
-            </a>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -67,7 +69,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-primary-foreground"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </motion.nav>
@@ -82,14 +84,14 @@ const Navbar = () => {
             className="fixed inset-0 z-40 bg-primary/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setMobileOpen(false)}
                 className="font-display text-3xl text-primary-foreground hover:text-primary-foreground/70 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}
